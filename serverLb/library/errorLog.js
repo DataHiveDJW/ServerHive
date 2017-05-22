@@ -28,11 +28,11 @@ errorLog.write = (error) => {
   queue.push(error);
 }
 
-let logStream = fs.createWriteStream(errorLog.path, {flags:'a'});
+// let logStream = fs.createWriteStream(errorLog.path, {flags:'a'});
 
-const errorStream = (stream) => {
-  logStream.write(stream);
-}
+// const errorStream = (stream) => {
+//   logStream.write(stream);
+// }
 
 errorLog.readWrite = () => {
   if (errorLog.path && queue.length > 0) {
